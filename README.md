@@ -79,7 +79,7 @@ do it while you make a full pass on the array and you don't have to swap
 anything
 
 ```js
-const bubbleSort = (nums) => {
+function bubbleSort(nums) {
   const sorted = [].concat(nums);
   let swaped = true;
   while(swaped){
@@ -106,7 +106,7 @@ It checks both the current number and the next one, if its out of order it remov
 element using splice and inserts it before the current one (j)
 
 ```js
-const insertionSort = (nums) => {
+function insertionSort(nums) {
   const sorted = [].concat(nums);
   
   for (let i = 1; i < sorted.length; i++) {
@@ -126,7 +126,7 @@ const insertionSort = (nums) => {
 ### Merge Sort
 
 ```js
-const mergeSort = (nums) => {
+function mergeSort(nums) {
   if (nums.length < 2) {
     return nums;
   }
@@ -138,7 +138,7 @@ const mergeSort = (nums) => {
   return _mergeSortMerger(mergeSort(left), mergeSort(right));
 }
 
-const _mergeSortMerger = (left, right) => {
+function _mergeSortMerger(left, right) {
   const sorted = [];
   while(left.length && right.length){
     const l = left[0];
